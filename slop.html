@@ -3,77 +3,216 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Huviringid</title>
+<title>Huviringid – kevad 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
+:root {
+  --paber: #f6f3ec;
+  --tekst: #24211c;
+  --hall: #6b655a;
+  --joon: #d9d2c3;
+  --rohe: #2f6b4f;
+  --rohe-tume: #24543e;
+  --kaart: #fffdf8;
+}
+* { box-sizing: border-box; }
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: linear-gradient(135deg, #7c3aed, #2563eb);
-  color: #fff;
-  padding: 27px;
+  background: var(--paber);
+  color: var(--tekst);
+  font: 17px/1.55 "Source Sans 3", Georgia, sans-serif;
 }
-header, .kaart, .vorm, button, input {
-  border-radius: 16px;
+.leht {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+h1, h2, h3 {
+  font-family: "Source Serif 4", Georgia, serif;
+  line-height: 1.2;
+  margin: 0;
+}
+h1 { font-size: 2.3rem; font-weight: 700; }
+h2 { font-size: 1.35rem; font-weight: 700; margin-bottom: 14px; }
+h3 { font-size: 1.15rem; font-weight: 500; }
+a { color: var(--rohe); }
+
+header { border-bottom: 2px solid var(--tekst); padding-bottom: 18px; margin-bottom: 32px; }
+.ylemine { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--hall); margin: 0 0 6px; }
+.sissejuhatus { max-width: 58ch; margin: 12px 0 0; }
+
+.ring {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--joon);
+}
+.ring:first-of-type { border-top: 1px solid var(--joon); }
+.aeg { font-weight: 600; }
+.aeg span { display: block; font-weight: 400; color: var(--hall); font-size: 0.92rem; }
+.ring p { margin: 6px 0 0; }
+.info { color: var(--hall); font-size: 0.92rem; }
+.markus {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--rohe-tume);
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  padding: 0 6px;
+  margin-left: 6px;
+  vertical-align: 2px;
+}
+
+section { margin-top: 44px; }
+form {
+  background: var(--kaart);
+  border: 1px solid var(--joon);
+  border-radius: 6px;
   padding: 24px;
 }
-header, .kaart, .vorm {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  margin-bottom: 19px;
-  animation: ilmu 1s;
+.rida { margin-bottom: 16px; }
+label { display: block; font-weight: 600; margin-bottom: 4px; }
+.vihje { font-weight: 400; color: var(--hall); font-size: 0.9rem; }
+input, select {
+  width: 100%;
+  font: inherit;
+  padding: 9px 11px;
+  border: 1px solid #b9b09d;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--tekst);
 }
-@keyframes ilmu { from { opacity: 0; } }
-h1, h2, p { font-size: 16px; font-weight: 400; }
-.kaart { background: rgba(168, 85, 247, 0.4); }
-.kaart:hover { transform: scale(1.05); }
-.silt { background: #f59e0b; padding: 3px 9px; border-radius: 16px; font-size: 13px; }
-.vaike { color: #a5b4fc; font-size: 13px; }
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid var(--rohe);
+  outline-offset: 1px;
+}
+.kaks { display: grid; grid-template-columns: 1fr 8rem; gap: 14px; }
 button {
-  background: linear-gradient(90deg, #14b8a6, #06b6d4);
+  font: inherit;
+  font-weight: 600;
+  background: var(--rohe);
   color: #fff;
-  border: none;
-  font-size: 16px;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
-.sulge { width: 20px; height: 20px; padding: 0; font-size: 11px; }
+button:hover { background: var(--rohe-tume); }
+#teade { margin: 14px 0 0; font-weight: 600; color: var(--rohe-tume); }
+#teade.viga { color: #9b2c1f; }
+
+footer { margin-top: 48px; font-size: 0.9rem; color: var(--hall); }
+
+@media (max-width: 560px) {
+  h1 { font-size: 1.8rem; }
+  .ring { grid-template-columns: 1fr; gap: 4px; }
+  .kaks { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
+<div class="leht">
+
 <header>
-  <h1>🚀 Kõik ühes kohas</h1>
-  <p>✨ Alusta siit ja avasta võimalusi! ✨</p>
+  <p class="ylemine">Kevadsemester 2027</p>
+  <h1>Huviringid</h1>
+  <p class="sissejuhatus">
+    Ringid algavad 2. veebruaril ja kestavad maini. Osalemine on õpilastele tasuta,
+    kunstiringis küsime materjalide eest 10 eurot semestris. Kohti on piiratud arv,
+    seega pane end kirja enne 26. jaanuari.
+  </p>
 </header>
 
-<div class="kaart">
-  <span class="silt">Uus!</span>
-  <h2>🎨 Kunstiring</h2>
-  <p>Kunstiring</p>
-  <p class="vaike">Teisipäeval kell 15.00, ruum 204</p>
-  <button>✨ Vaata lähemalt ✨</button>
+<main>
+  <div class="ring">
+    <div class="aeg">Teisipäev 15.00<span>ruum 204</span></div>
+    <div>
+      <h3>Kunstiring</h3>
+      <p>Joonistame, maalime akrüülvärvidega ja proovime kevadel ka linoollõiget.
+        Varasemat kogemust pole vaja. Juhendab Kadri Tamm.</p>
+      <p class="info">5.–9. klass · kuni 14 õpilast</p>
+    </div>
+  </div>
+
+  <div class="ring">
+    <div class="aeg">Kolmapäev 16.00<span>ruum 112</span></div>
+    <div>
+      <h3>Robootikaring <span class="markus">uus</span></h3>
+      <p>Ehitame LEGO Spike komplektidest roboteid ja õpime neid programmeerima.
+        Aprillis osaleme piirkondlikul robotivõistlusel.</p>
+      <p class="info">4.–8. klass · kuni 12 õpilast</p>
+    </div>
+  </div>
+
+  <div class="ring">
+    <div class="aeg">Neljapäev 15.30<span>aula</span></div>
+    <div>
+      <h3>Teatriring</h3>
+      <p>Hääle- ja liikumisharjutused, improvisatsioon ning kevadlavastus,
+        mille mängime ette mai lõpus lastevanemate õhtul.</p>
+      <p class="info">6.–12. klass · kuni 18 õpilast</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>Registreerumine</h2>
+    <form id="vorm" novalidate>
+      <div class="kaks">
+        <div class="rida">
+          <label for="nimi">Õpilase nimi</label>
+          <input id="nimi" name="nimi" autocomplete="name" required>
+        </div>
+        <div class="rida">
+          <label for="klass">Klass</label>
+          <input id="klass" name="klass" placeholder="nt 6b" required>
+        </div>
+      </div>
+      <div class="rida">
+        <label for="ring">Ring</label>
+        <select id="ring" name="ring" required>
+          <option value="">Vali ring…</option>
+          <option>Kunstiring (T 15.00)</option>
+          <option>Robootikaring (K 16.00)</option>
+          <option>Teatriring (N 15.30)</option>
+        </select>
+      </div>
+      <div class="rida">
+        <label for="email">Lapsevanema e-post <span class="vihje">– saadame kinnituse</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <button type="submit">Registreeru</button>
+      <p id="teade" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  Küsimuste korral kirjuta huvijuhile või tule läbi õpetajate tuppa (ruum 101).
+</footer>
+
 </div>
 
-<div class="kaart">
-  <span class="silt">Tasuta</span>
-  <h2>🤖 Robootikaring</h2>
-  <p>Robootikaring</p>
-  <p class="vaike">Kolmapäeval kell 16.00, ruum 112</p>
-  <button>🚀 Vaata lähemalt 🚀</button>
-</div>
-
-<div class="kaart">
-  <span class="silt">Beta</span>
-  <h2>🎭 Teatriring</h2>
-  <p>Teatriring</p>
-  <p class="vaike">Neljapäeval kell 15.30, aula</p>
-  <button>🎯 Vaata lähemalt 🎯</button>
-</div>
-
-<div class="vorm">
-  <h2>📝 Registreeru</h2>
-  <label>Nimi</label>
-  <input placeholder="Nimi">
-  <button>🎉 Saada 🎉</button>
-  <button class="sulge">✖</button>
-</div>
+<script>
+const vorm = document.getElementById('vorm');
+const teade = document.getElementById('teade');
+vorm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (!vorm.checkValidity()) {
+    teade.className = 'viga';
+    teade.textContent = 'Palun täida kõik väljad ja kontrolli e-posti aadressi.';
+    vorm.querySelector(':invalid').focus();
+    return;
+  }
+  const nimi = vorm.nimi.value.trim().split(' ')[0];
+  const ring = vorm.ring.value.split(' (')[0].toLowerCase();
+  teade.className = '';
+  teade.textContent = `Aitäh! ${nimi} on kirjas: ${ring}. Kinnitus tuleb e-postile.`;
+  vorm.reset();
+});
+</script>
 </body>
 </html>
